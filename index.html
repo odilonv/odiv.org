@@ -2,19 +2,91 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<title>ODIV</title>
 
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="stylesheet" href="style.css" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-	<title>ODIV</title>
+
+	<script src="https://kit.fontawesome.com/e789a2f629.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<h1>PROCHAINENT ...</h1>
-	<h2><center>Suis mon aventure ici :</center></h2>
-	<h1><center>
-		<a href="https://twitter.com/odiv_v" title="TWITTER"><img alt="Twitter" src="img/twitter.ico"/></a>
-		<a href="https://www.tiktok.com/@odiv_v" title="TIKTOK"><img alt="Tiktok" src="img/tiktok.ico"/></a>
-		<a href="https://instagram.com/odiv_v" title="INSTAGRAM"><img alt="Instagram" src="img/instagram.ico"/></a>
-	</center></h1>
+
+		<nav>
+			<ul id="mainNav">
+				<li class="active">
+					<a href="#home">Home</a>
+				</li>
+				<li>
+					<a href="#work">work</a>
+				</li>
+				<li>
+					<a href="#contact">Contact</a>
+				</li>
+				<li>
+					<a href="#about">About</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!--<div class="container">
+			<div class="slider-block">
+				<h1>WORK IN PROGRESS ...</h1>
+			</div>
+			<div class="slider-block">
+				<h1>block 2</h1>
+			</div>
+			<div class="slider-block">
+				<h1>block 3</h1>
+			</div>
+			<div class="slider-block">
+				<h1>block 4</h1>
+			</div>
+		</div>-->
+		<section id="home">
+			<h2>Home</h2>
+		</section>
+		<section id="work">
+			<h2>work</h2>
+		</section>
+		<section id="contact">
+			<h2>conatct</h2>
+		</section>
+		<section id="about">
+			<h2>about</h2>
+		</section>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+		<script>
+			var lastId,
+					topMenu= $("#mainNav"),
+					topMenuHeight =topMenu.outerHeight()+1,
+					menuItems = topMenu.find("a"),
+					scrollItems =menuItems.map(function (){
+						var item = $($(this).attr("href"));
+						if(item.length){return item;}
+					});
+			menuItems.click(function (e){
+				var href = $(this).attr("href"),
+						offsetTop = href === "#" ? 0 :
+								$(href).offset().top=topMenuHeight+1;
+				$('html,body').stop.animate({
+					scrollTop:offsetTop
+				}, 850);
+				e.preventDefault();
+			});
+		</script>
+
+
+
+
+	<ul class="reseaux">
+		<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+		<li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+		<li><a href="#"><i class="fab fa-behance"></i></a></li>
+		<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+		<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+	</ul>
 </body>
 </html>

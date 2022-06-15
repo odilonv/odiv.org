@@ -1,5 +1,93 @@
+html{
+    margin: 0;
+    padding: 0;
+    background-image: url(img/WALLPAPERr.png) ;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
 body{
-    background-image: url('img/WALLPAPERr.png');
+    margin: 0;
+    padding: 0;
+    /*overflow: scroll;*/
+}
+
+h1{
+    padding:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: antiquewhite;
+    height: 65px;
     width: 100%;
-    background-size: auto;
+    z-index: 1;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: table;
+    margin: 0 auto;
+}
+nav ul li{
+    padding: 10px;
+}
+
+section{
+    height: 100vh;
+    position: relative;
+    margin:0;
+    padding: 0;
+    display: block;
+    z-index: 0;
+}
+
+
+
+.container{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.slider-block{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid black;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+ul.reseaux{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*transform: translate(-50%, -50%);*/
+}
+ul.reseaux> li{
+    margin: 0px;
+    list-style: none;
+    font-size: 15px;
+    transition: 0.5s;
+
+}
+ul.reseaux> li a{
+    width: 15px;
+    padding: 10px;
+    display: block;
+    color: #fff;
+
+}
+ul.reseaux> li:hover{
+    transform: scale(1.5);
 }
