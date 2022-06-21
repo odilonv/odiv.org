@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>ODIV</title>
@@ -11,74 +11,23 @@
 	<script src="https://kit.fontawesome.com/e789a2f629.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+	<header>
 		<nav>
-			<ul id="mainNav">
-				<li class="active">
-					<a href="#home">Home</a>
-				</li>
-				<li>
-					<a href="#work">work</a>
-				</li>
-				<li>
-					<a href="#contact">Contact</a>
-				</li>
-				<li>
-					<a href="#about">About</a>
-				</li>
+			<a href="#home" class="active">
+			<img src="favicon.ico" alt="LOGO" CLASS="logo"></a>
+
+			<ul class="navigation">
+
+				<li><a href="#about">01. QUI SUIS-JE ?</a></li>
+				<li><a href="#skills">02. COMPETENCES</a></li>
+				<li><a href="#portfolio">03. MON TRAVAIL</a></li>
+				<li><a href="#contact">04. CONTACT</a></li>
 			</ul>
 		</nav>
 
-		<!--<div class="container">
-			<div class="slider-block">
-				<h1>WORK IN PROGRESS ...</h1>
-			</div>
-			<div class="slider-block">
-				<h1>block 2</h1>
-			</div>
-			<div class="slider-block">
-				<h1>block 3</h1>
-			</div>
-			<div class="slider-block">
-				<h1>block 4</h1>
-			</div>
-		</div>-->
-		<section id="home">
-			<h2>Home</h2>
-		</section>
-		<section id="work">
-			<h2>work</h2>
-		</section>
-		<section id="contact">
-			<h2>conatct</h2>
-		</section>
-		<section id="about">
-			<h2>about</h2>
-		</section>
-
-		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-		<script>
-			var lastId,
-					topMenu= $("#mainNav"),
-					topMenuHeight =topMenu.outerHeight()+1,
-					menuItems = topMenu.find("a"),
-					scrollItems =menuItems.map(function (){
-						var item = $($(this).attr("href"));
-						if(item.length){return item;}
-					});
-			menuItems.click(function (e){
-				var href = $(this).attr("href"),
-						offsetTop = href === "#" ? 0 :
-								$(href).offset().top=topMenuHeight+1;
-				$('html,body').stop.animate({
-					scrollTop:offsetTop
-				}, 850);
-				e.preventDefault();
-			});
-		</script>
 
 
+	</header>
 
 
 	<ul class="reseaux">
@@ -88,5 +37,100 @@
 		<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 		<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
 	</ul>
+
+
+	<div class="container">
+		<section id="home">
+			<div class="container reveal">
+				<h1>Watch the Nav Bar as you Scroll Down &#8595;</h1>
+			</div>
+		</section>
+		<section id="about">
+			<div class="container reveal">
+				<h2>About</h2>
+				<div class="text-container">
+					<div class="text-box">
+						<h3>Section Text</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+							eius molestiae perferendis eos provident vitae iste. Lorem ipsum
+							dolor sit amet consectetur adipisicing elit. Quam blanditiis,
+							officiis, voluptate quisquam aperiam nobis est, quis neque esse
+							soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
+							accusamus doloremque.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex est
+							rerum id quis eaque rem suscipit reprehenderit quaerat vero
+							nesciunt?
+						</p>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Voluptatum, eaque voluptatibus. Eaque tempore quam nesciunt. Lorem
+							ipsum dolor sit amet consectetur adipisicing elit. Eum adipisci
+							blanditiis assumenda atque officiis? Vel, fuga facilis quia
+							reprehenderit nihil optio harum. Quo sapiente veniam atque
+							corporis tempora non repellat?
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="skills">
+			<div class="container reveal">
+				<h2>skills</h2>
+				<div class="text-container">
+					<div class="text-box">
+						<h3>Section text</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+							eius molestiae perferendis eos provident vitae iste.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="portfolio">
+			<div class="container reveal">
+				<h2>skills</h2>
+				<div class="text-container">
+					<div class="text-box">
+						<h3>Section text</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+							eius molestiae perferendis eos provident vitae iste.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact">
+			<div class="container reveal">
+				<h2>Contact</h2>
+				<div class="text-container">
+					<div class="text-box">
+						<h3>Section Text</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+					<div class="text-box">
+						<h3>Section Text</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+
+
 </body>
 </html>
