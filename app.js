@@ -1,5 +1,29 @@
 let section = document.querySelectorAll("section");
-let menu = document.querySelectorAll("header nav a");
+let menu = document.querySelectorAll(".links-circle");
+
+const btnCircle = document.querySelector('.btn-circle');
+const circleMenu = document.querySelector('.circle-menu');
+const contact = document.querySelector('.contact-circle');
+const contactc = document.querySelector('.contact-corner');
+let i = 0;
+
+btnCircle.addEventListener('click', () => {
+    i++;
+    if(i & 1){
+        contact.style.opacity = 0;
+        contactc.style.top = '-30px';
+    }
+    else {
+        contact.style.opacity = 1;
+        contactc.style.top = '65px';
+        contactc.style.right = '150px';
+    }
+    btnCircle.classList.toggle('menu-anim');
+    circleMenu.classList.toggle('circle-anim');
+
+})
+
+
 
 window.onscroll = () => {
     section.forEach((i) => {
