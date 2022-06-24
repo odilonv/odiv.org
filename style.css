@@ -12,6 +12,69 @@ a {
     color: white;
 }
 
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.containerAnim{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+.containerAnim #scene{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.containerAnim #scene #text{
+    position: absolute;
+    display: flex !important;
+    position: relative;
+    color: white;
+    font-size: 14vw;
+    z-index: 100;
+}
+
+.containerAnim #scene #text span{
+    letter-spacing: 12px;
+    position: relative !important;
+    display: inline-block;
+    text-shadow: 1px 1px #e1e1e1,
+    2px 2px #e1e1e1,
+    3px 3px #e1e1e1,
+    4px 4px #e1e1e1,
+    5px 5px #e1e1e1,
+    6px 6px #e1e1e1,
+    20px 30px 0 rgba(0,0,0,0.1);
+
+
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.layer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
 
 ul.reseaux{
     display: flex;
@@ -20,6 +83,7 @@ ul.reseaux{
     position: fixed;
     bottom: 105px;
     left: 40px;
+    z-index: 1000;
     /*transform: translate(-50%, -50%);*/
 }
 ul.reseaux> li{
@@ -59,6 +123,18 @@ ul.reseaux> li:hover{
     right: 55px;
 }
 
+#dede {
+    position: absolute;
+    color: white;
+    top: 75px;
+    left: 150px;
+    font-size: 20px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    line-height: 0.70em;
+    outline: none;
+
+}
+
 .arcdecercleL{
     position: fixed;
     width: 100px;
@@ -77,7 +153,7 @@ ul.reseaux> li:hover{
 header {
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 100;
     background: transparent;
 
 }
@@ -310,9 +386,11 @@ header {
 
 
 body {
-    background: rgb(246,175,175);
-    background: linear-gradient(90deg, rgba(246,175,175,1) 0%, rgba(244,108,108,1) 35%, rgba(244,140,148,1) 100%);
-    overflow-x: hidden;
+    background: rgb(199,53,61);
+    background: radial-gradient(circle, rgba(199,53,61,1) 0%, rgba(243,92,92,1) 32%, rgba(199,72,72,1) 100%);
+    /*background: rgb(199,53,61);
+    background: radial-gradient(circle, rgba(199,53,61,1) 0%, rgba(167,67,67,1) 31%, rgba(199,72,72,1) 100%);
+    */overflow-x: hidden;
 
 
 
@@ -325,6 +403,7 @@ body {
 
 
 section {
+
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -332,10 +411,11 @@ section {
 }
 section:nth-child(1) {
     color: white;
+
 }
 section:nth-child(2) {
-    color: black;
-    background: white;
+    color: white;
+
 }
 section:nth-child(3) {
     color: white;
@@ -352,6 +432,7 @@ section .container {
 }
 section h1 {
     font-size: 3rem;
+    font-size: 3rem;
     margin: 20px;
 }
 section h2 {
@@ -361,11 +442,20 @@ section h2 {
 }
 section .text-container {
     display: flex;
+
 }
 section .text-container .text-box {
-    margin: 20px;
-    padding: 20px;
-    background: darkgrey;
+    margin: 0px;
+
+    padding: 100px;
+    height: 100%;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
 }
 section .text-container .text-box h3 {
     font-size: 30px;
@@ -383,15 +473,70 @@ section .text-container .text-box h3 {
         flex-direction: column;
     }
 }
+.contain .box{
+    z-index: 1000;
+    padding: 50px;
+    transform-style: preserve-3d;
+    animation: animate 25s linear infinite;
+
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: perspective(1000px) rotateX(0deg) rotate(10deg);
+    }
+    100%
+    {
+        transform: perspective(1000px) rotateX(360deg) rotate(10deg);
+    }
+}
+.contain{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.contain .box span{
+
+
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding: 0 100px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.75), transparent);
+    line-height: 0px;
+    transform-style: preserve-3d;
+    text-shadow: 0 5px 20px rgba(0,0,0,1);
+    transform: translate(-50%,-50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(106px);
+
+}
+
+.contain .box span i:nth-child(1){
+    font-style: initial;
+    color: lightcoral;
+}
+.contain .box span i:nth-child(2){
+    font-style: initial;
+    color: lightgrey;
+}
+
+
+
 
 
 
 .reveal {
     position: relative;
+
     transform: translateY(150px);
     opacity: 0;
     transition: 2s all ease;
 }
+
 
 .reveal.active {
     transform: translateY(0);
