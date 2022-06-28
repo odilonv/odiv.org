@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | ODIV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/e789a2f629.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link href="http://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet">
+
+  </head>
+<body>
+<header>
+    <nav>
+
+        <a href="index.html#home" class="active">
+            <img src="img/LOGO.png" alt="LOGO" CLASS="logo"></a>
+        <!--<ul class="navigation">
+            <li><a href="#about">01. QUI SUIS-JE ?</a></li>
+            <li><a href="#skills">02. COMPETENCES</a></li>
+            <li><a href="#portfolio">03. MON TRAVAIL</a></li>
+            <li><a href="#contact">04. CONTACT</a></li>
+        </ul>-->
+        <div class="container-corner">
+            <div class="circle-menu">
+                <a href="index.html#about" class="links-circle">01. PRESENTATION</a>
+                <a href="index.html#skills" class="links-circle">02. COMPETENCES</a>
+                <a href="index.html#portfolio" class="links-circle">03. PORTFOLIO</a>
+
+            </div>
+            <div class="btn-circle">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <div class="contact-corner">
+            <a href="contact.html">
+                <div class="contact-circle">
+                    CONTACT <i class="fa-solid fa-message"></i>
+                </div></a>
+        </div>
+
+
+
+    </nav>
+</header>
+<div class="container">
+    <section id="contact">
+            <label id="contactlab"><label id="contactlabe">Hey</label>, <br> comment puis-je t'aider ?</label>
+            <div class="text-container">
+                <div class="text-box">
+                    <form method="post" action="mail.php">
+                    <p><label>Nom .</label>
+
+                        <label>. Prenom</label></p>
+                        <p><input type="text" name="nom" class="txtform"><input type="text" name="prenom" class="txtform"></p>
+                    <p>Mail .</p>
+                    <input type="email" name="email" class="txtformMail">
+                    <p>Message .</p>
+                    <textarea rows="9" name="message" class="txtformMsg"></textarea>
+                    <button class="contact-circle">Envoyer</button>
+                    </form>
+                </div>
+
+
+        </div>
+    </section>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>

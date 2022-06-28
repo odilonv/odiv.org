@@ -66,6 +66,27 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
-
 // To check the scroll position on page load
 reveal();
+
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    const element = document.querySelector(".reseaux");
+    const element2 = document.querySelector(".arcdecercleL");
+    if (document.body.scrollTop > 655 || document.documentElement.scrollTop > 655)
+    {
+        element.style.position= "absolute" ;
+        element.style.bottom= "-550px";
+        element2.style.position= "absolute" ;
+        element2.style.bottom= "-375px";
+    }
+    else
+    {
+        element.style.position= "fixed";
+        element.style.bottom= "105px";
+        element2.style.position= "fixed";
+        element2.style.bottom= "280px";
+
+    }
+}
