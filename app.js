@@ -74,6 +74,7 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     const element = document.querySelector(".reseaux");
     const element2 = document.querySelector(".arcdecercleL");
+    const element3 = document.querySelector(".rectanglehorizontal");
     if (document.body.scrollTop > 655 || document.documentElement.scrollTop > 655)
     {
         element.style.position= "absolute" ;
@@ -81,12 +82,14 @@ function scrollFunction() {
         element2.style.position= "absolute" ;
         element2.style.bottom= "-375px";
     }
+
     else
     {
         element.style.position= "fixed";
         element.style.bottom= "105px";
         element2.style.position= "fixed";
         element2.style.bottom= "280px";
+
 
     }
 }

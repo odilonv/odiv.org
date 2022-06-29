@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+@font-face {
+    font-family: "Akira Expanded";
+    src: url("Akira Expanded Demo.otf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +16,12 @@ a {
     color: white;
 }
 
-.banner{
+/*.banner{
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-}
+}*/
 .containerAnim{
     position: absolute;
     width: 100%;
@@ -77,11 +81,12 @@ a {
 
 ul.reseaux{
     display: flex;
-    position: fixed;
     flex-direction: column;
     text-align: center;
+    position: fixed;
     bottom: 105px;
     left: 40px;
+    z-index: 100;
 
     /*transform: translate(-50%, -50%);*/
 }
@@ -121,6 +126,19 @@ ul.reseaux> li:hover{
     bottom: 0px;
     right: 55px;
 }
+
+.rectanglehorizontal{
+    position: fixed;
+    opacity: 1;
+    background: white;
+    height: 1px;
+    z-index: 1000;
+
+    right: 55px;
+    left:55px;
+
+}
+
 
 #dede {
     position: absolute;
@@ -165,7 +183,7 @@ ul.reseaux> li:hover{
 header {
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
     background: transparent;
 
 }
@@ -360,7 +378,7 @@ header {
 }
 
 input, textarea{
-    font-size: 15px;
+
     letter-spacing: 1px;
     color: white;
     text-shadow: 0 2px 12px rgba(0,0,0,1);
@@ -375,6 +393,22 @@ input, textarea{
     justify-content: center;
     align-items: center;
     padding: 4px 5px;
+}
+
+.alert{
+    font-size: 12px;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    padding: 4px 5px;
+    width: 50%;
 }
 
 
@@ -510,7 +544,7 @@ section:nth-child(3) {
 }
 section:nth-child(4) {
     color: black;
-    background: white;
+
 }
 section:nth-child(5) {
     color: white;
@@ -528,9 +562,11 @@ section h2 {
     text-align: center;
     text-transform: uppercase;
 }
+
 section .text-container {
     display: flex;
-    margin-bottom: 50px;
+    height: 100%;
+
 
 }
 #contact .text-container {
@@ -542,9 +578,8 @@ section .text-container {
     padding: 50px;
 }
 section .text-container .text-box {
-    margin: 0px;
-    padding: 100px;
-    height: 100%;
+    margin-bottom: 80px;
+    padding: 80px;
     background: rgba( 255, 255, 255, 0.2 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 8.5px );
