@@ -22,6 +22,100 @@ a {
     height: 100vh;
     overflow: hidden;
 }*/
+
+
+
+.compets{
+    position: relative;
+    transform: skewY(-15deg);
+    left: 50px;
+}
+.compets li{
+    position: relative;
+    list-style: none;
+    width: 300px;
+    background: white;
+
+    padding: 25px;
+    transition: 0.5s;
+    z-index: calc(1 * var(--i));
+}
+
+.compets li:hover{
+    transform: translateX(-50px);
+    background: var(--clr);
+}
+
+.compets li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: white;
+    filter: brightness(0.7);
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+.compets li:hover::before{
+    background: var(--clr);
+    filter: brightness(0.7);
+}
+
+.compets li::after{
+    content: ' ';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: white;
+    filter: brightness(0.9);
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+.compets li:hover::after{
+    background: var(--clr);
+    filter: brightness(0.9);
+}
+
+.compets li a{
+    text-decoration: none;
+    color: rgba(199,53,61,1);
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.compets li:hover a{
+    color: #fff;
+}
+.compets li:last-child::after{
+    box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
+}
+.compets li span{
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+
+
+
 .containerAnim{
     position: absolute;
     width: 100%;
@@ -578,8 +672,8 @@ section .text-container {
     padding: 50px;
 }
 section .text-container .text-box {
-    margin-bottom: 80px;
-    padding: 80px;
+    margin-bottom: 60px;
+    padding: 60px;
     background: rgba( 255, 255, 255, 0.2 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 8.5px );
@@ -588,6 +682,7 @@ section .text-container .text-box {
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 }
+
 
 section .text-container .text-box h3 {
     font-size: 30px;
