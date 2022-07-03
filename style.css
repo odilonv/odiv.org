@@ -27,14 +27,15 @@ a {
 
 .compets{
     position: relative;
-    transform: skewY(-15deg);
-    left: 50px;
+    transform: skewY(-5deg);
+    left: 12%;
+    top:12%;
 }
 .compets li{
     position: relative;
     list-style: none;
     width: 300px;
-    background: white;
+    background: rgba(199,53,61,1);
 
     padding: 25px;
     transition: 0.5s;
@@ -53,7 +54,7 @@ a {
     left: -40px;
     width: 40px;
     height: 100%;
-    background: white;
+    background: rgba(199,53,61,1);
     filter: brightness(0.7);
     transform-origin: right;
     transform: skewY(45deg);
@@ -72,7 +73,7 @@ a {
     left: 0;
     width: 100%;
     height: 40px;
-    background: white;
+    background: rgba(199,53,61,1);
     filter: brightness(0.9);
     transform-origin: bottom;
     transform: skewX(45deg);
@@ -83,17 +84,18 @@ a {
     background: var(--clr);
     filter: brightness(0.9);
 }
+/*linear-gradient(rgba(199,53,61,1) 0%, rgba(243,92,92,1) 32%, rgba(199,72,72,1) 100%)*/
 
 .compets li a{
     text-decoration: none;
-    color: rgba(199,53,61,1);
+    color: white;
     display: block;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: 0.5s;
 }
 .compets li:hover a{
-    color: #fff;
+    color: rgba(199,53,61,1);
 }
 .compets li:last-child::after{
     box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
@@ -205,11 +207,14 @@ ul.reseaux> li:hover{
 
 .rectangleleft{
     position: fixed;
+    opacity: 1;
     background: white;
     width: 1px;
     height: 100px;
     bottom: 0px;
-    left: 55px;
+    left: 54px;
+    transition: 0.5s;
+    z-index: 100;
 }
 
 .rectangleright{
@@ -218,18 +223,33 @@ ul.reseaux> li:hover{
     width: 1px;
     height: 100px;
     bottom: 0px;
-    right: 55px;
+    right: 54px;
+    transition: 1.2s;
 }
 
 .rectanglehorizontal{
-    position: fixed;
-    opacity: 1;
+    position: absolute;
+
+    bottom: -1050px;
     background: white;
     height: 1px;
-    z-index: 1000;
+    transition: 3s;
+    opacity: 0;
+    right: -1000px;
+    left:112px;
 
-    right: 55px;
-    left:55px;
+}
+
+.rectanglevertical{
+    position: absolute;
+    bottom: -3099px;
+    background: white;
+    height: 2000px;
+    width: 1px;
+    transition: 3s;
+    opacity: 1;
+
+        left:55px;
 
 }
 
@@ -250,7 +270,6 @@ ul.reseaux> li:hover{
     position: fixed;
     width: 100px;
     height: 50px;
-
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     background: transparent;
     border: 1px solid white;
@@ -258,6 +277,37 @@ ul.reseaux> li:hover{
     bottom: 280px;
     left: -45px;
 }
+
+
+
+.arcdecercleR{
+    position: fixed;
+    width: 100px;
+    height: 50px;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    background: transparent;
+    border: 1px solid white;
+    border-bottom: 0;
+    bottom: 100px;
+    right: -45px;
+    transition: 2s;
+}
+
+.arcdecercleR2{
+    position: absolute;
+    opacity: 0;
+    width: 100px;
+    height: 50px;
+    border-radius: 50% 0% 0 0 / 100% 100% 0 0;
+    background: transparent;
+    border: 1px solid white;
+    border-bottom: 0;
+    border-right: 0;
+    bottom: -1099px;
+    left: 55px;
+    transition: 6s;
+}
+
 
 .arcdecercleL2{
     position: fixed;
@@ -338,10 +388,10 @@ header {
 }
 
 
-.contact-circle:hover{
+.contact-circle:hover, .btn:hover{
     background: #f15f5f;
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 
@@ -521,18 +571,24 @@ input, textarea{
     height: 200px;
 }
 
-#btn{
-    background: rgba( 255, 255, 255, 0.2 );
+.btn{
+    background: white;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 8.5px );
     -webkit-backdrop-filter: blur( 8.5px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    color: white;
+    border: 2px solid #f15f5f;
+    color: #f15f5f;
     height: 50px;
     width: 100%;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    transition: 1.5s;
+    margin: 20px;
 }
+
+
 
 
 .links-circle:nth-child(1){
@@ -637,7 +693,7 @@ section:nth-child(3) {
     color: white;
 }
 section:nth-child(4) {
-    color: black;
+    color: white;
 
 }
 section:nth-child(5) {
@@ -647,7 +703,6 @@ section .container {
     margin: 100px;
 }
 section h1 {
-    font-size: 3rem;
     font-size: 3rem;
     margin: 20px;
 }
@@ -659,6 +714,7 @@ section h2 {
 
 section .text-container {
     display: flex;
+
     height: 100%;
 
 
@@ -668,11 +724,43 @@ section .text-container {
     margin-bottom: 0px;
 
 }
+#txxtxtx{
+    display: flex;
+    justify-content: space-between;
+}
+.moitie{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.moitiep{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top:10%;
+
+}
+#pad-top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top:10%;
+}
+
+
+
+
+
 #contact .text-container .text-box {
     padding: 50px;
 }
 section .text-container .text-box {
-    margin-bottom: 60px;
+    margin: 60px;
+    margin-top: 30px;
     padding: 60px;
     background: rgba( 255, 255, 255, 0.2 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -751,6 +839,11 @@ section .text-container .text-box h3 {
     color: lightcoral;
 }
 
+footer{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+}
 
 
 
