@@ -205,6 +205,58 @@ ul.reseaux> li:hover{
     transform: scale(1.5);
 }
 
+.scroll {
+    position: absolute;
+    right: 10px;
+    bottom: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.scroll span{
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    -webkit-animation-name: bounce-1;
+    animation-name: bounce-1;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce-1 {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
 .rectangleleft{
     position: fixed;
     opacity: 1;
@@ -213,7 +265,7 @@ ul.reseaux> li:hover{
     height: 100px;
     bottom: 0px;
     left: 54px;
-    transition: 0.5s;
+    transition: 0.1s;
     z-index: 100;
 }
 
@@ -225,31 +277,38 @@ ul.reseaux> li:hover{
     bottom: 0px;
     right: 54px;
     transition: 1.2s;
+    z-index: 100;
 }
 
 .rectanglehorizontal{
     position: absolute;
-
-    bottom: -1050px;
-    background: white;
-    height: 1px;
-    transition: 3s;
-    opacity: 0;
+    z-index: 1000;
+    top: -60.5px;
+    /*bottom: -1050px;
     right: -1000px;
     left:112px;
+    opacity: 0;*/
+
+    background: white;
+    height: 1px;
+    transition: 2s;
+
+    right: -45px;
+
+    left: 52px;/*
+    left:112px;*/
 
 }
 
 .rectanglevertical{
     position: absolute;
-    bottom: -3099px;
+    bottom: -2999px;
     background: white;
-    height: 2000px;
+    height: 1900px;
     width: 1px;
     transition: 3s;
     opacity: 1;
-
-        left:55px;
+    left:55px;
 
 }
 
@@ -305,7 +364,7 @@ ul.reseaux> li:hover{
     border-right: 0;
     bottom: -1099px;
     left: 55px;
-    transition: 6s;
+    transition: 3s;
 }
 
 
@@ -320,6 +379,22 @@ ul.reseaux> li:hover{
     border-top: 0;
     bottom: 305px;
     left: -145px;
+}
+
+
+.arcdecercleRreverse{
+    position: absolute;
+    width: 675px;
+    height: 360px;
+    border-radius: 0 80% 10% 30% / 0% 0% 0% 40% ;
+
+    background: transparent;
+    border: 1px solid white;
+    border-top: 0;
+    border-right: 0;
+    bottom: -3350px;
+    left: 55px;
+    transition: 3s;
 }
 
 
@@ -371,7 +446,11 @@ header {
     color: #f15f5f;
     width: 180px;
     height: 40px;
-    border-radius: 15px;
+
+    /*height: 50px;
+    width: 50px;
+    border-radius: 50%;*/
+    border-radius: 20px;
     position: relative;
     z-index: 15;
     cursor: pointer;
@@ -382,13 +461,29 @@ header {
     transition: 1s;
     font-size: 16px;
 }
-.contact-circle>i{
+/*.contact-circle>i{
     margin-left: 10px;
+
+}*/
+
+
+.contact-circle:hover{
+    background: #f15f5f;
+    color: white;
+    transform: scale(1.05);
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 0;
+}
+
+.contact-circle:hover:after{
+    content: attr(data-hover);
+    font-size: 12px;
 
 }
 
-
-.contact-circle:hover, .btn:hover{
+.btn:hover{
     background: #f15f5f;
     color: white;
     transform: scale(1.05);
@@ -398,8 +493,12 @@ header {
 
 
 
+
+
 .btn-circle {
     background: #f15f5f;
+
+
     display: block;
     width: 90px;
     height: 90px;
@@ -423,9 +522,9 @@ header {
 
 
 .line {
-    width: 50%;
-    height: 3px;
+    height: 4px;
     background: #fff;
+    border-radius: 30px;
     transition:
             transform 0.2s ease,
             opacity 0.2s ease,
@@ -434,9 +533,14 @@ header {
 }
 .line:nth-child(1){
     top: -10px;
+    width: 50%;
+}
+.line:nth-child(2){
+    width: 30%;
 }
 .line:nth-child(3){
     top: 10px;
+    width: 50%;
 }
 
 .btn-circle.menu-anim .line:nth-child(1){
@@ -464,7 +568,7 @@ header {
     background: #db5656;
     width: 500px;
     height: 500px;
-    border-radius: 50%;
+    border-radius: 80%;
     border: 180px solid rgba(255,255,255,0.239);
     position: absolute;
     z-index: 5;
@@ -606,6 +710,7 @@ input, textarea{
     transition: transform 0.2s ease 0.2s;
 }
 .links-circle:nth-child(1):hover{
+
     color: #f15f5f;
     background: white;
     width: 150px;
@@ -838,13 +943,147 @@ section .text-container .text-box h3 {
     font-style: initial;
     color: lightcoral;
 }
-
 footer{
-    position: absolute;
-    height: 100px;
-    width: 100%;
+    z-index: 10000;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle, rgba(60,0,0,1) 0%, rgba(164,48,48,1) 0%, rgba(227,95,102,1) 100%);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 10%;
+}
+.logo-footer-contain{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.logo-footer:hover,
+.logo-footer.active {
+    transform: rotate(360deg)
+    scale(1.1);
+}
+
+
+.logo-footer{
+    width: 90px;
+    height: 90px;
+    transition: 0.5s;
+    text-align: left;
+    border: 5px solid #f15f5f;
+    background: #f15f5f;
+    border-radius: 100%;
+    box-shadow: 0 8px 15px 0 rgba( 31, 38, 135, 0.37);
+}
+
+.inner-footer{
+    margin: 0;
+    padding: 0;
+    height: 25vh;
+}
+
+.social-links{
+    bottom: 0;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+ul.social-links> li{
+    padding: 18px;
+}
+
+ul.social-links> li a{
+    padding: 15px;
+    font-size: 18px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: 0.5s;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 15px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.quick-links{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+ul.quick-links> li{
+    padding: 20px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+.quick-container{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+}
+.link a{
+    margin-left: 30px;
+    padding: 20px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: 0.5s;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 15px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.quick-links>li:hover,
+.quick-links>li:active,
+.social-links>li a:hover,
+.social-links>li a:active,
+.link> a:hover,
+.link> a:active{
+    background: #f15f5f;
+    border-radius: 50px;
+}
+
+
+.outer-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 5vh;
+    font-size: 10px;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 15px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 
 
 

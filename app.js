@@ -89,29 +89,30 @@ function scrollFunction() {
             element2.style.bottom= "-375px";
             element3.style.position="fixed";
             element3.style.bottom="0px";
-            element4.style.right="-1000px";
             element5.style.position="fixed";
             element5.style.bottom="100px";
-            element4.style.opacity="0";
             element6.style.opacity="0";
-            element7.style.background="white";
-            element7.style.width="1px";
-            element7.style.height="100px";
+            element7.style.opacity="0";
+            //element7.style.background="white";
+            //element7.style.width="1px";
+            //element7.style.height="100px";
+            //element4.style.right="-1000px";
+            //element4.style.opacity="0";
 
 
         }
         else {
             element3.style.position="absolute";
             element3.style.bottom="-1050px";
-            element4.style.right="55px";
             element5.style.position="absolute"
             element5.style.bottom="-950px";
-            element4.style.opacity="1";
             element6.style.opacity="1";
-            element7.style.opacity="0.5";
+            /*element7.style.opacity="0.5";
             element7.style.background ="linear-gradient(-90deg,#590000 35%, #C7353D)";
             element7.style.width="100%";
-            element7.style.height="10px";
+            element7.style.height="10px";*/
+            //element4.style.right="55px";
+            //element4.style.opacity="1";
         }
     }
     else
@@ -122,14 +123,15 @@ function scrollFunction() {
         element2.style.bottom= "280px";
         element3.style.position="fixed";
         element3.style.bottom="0px";
-        element4.style.right="-1000px";
         element5.style.position="fixed";
         element5.style.bottom="100px";
-        element4.style.opacity="0";
         element6.style.opacity="0";
-        element7.style.background="white";
+        element7.style.opacity="1";
+        /*element7.style.background="white";
         element7.style.width="1px";
-        element7.style.height="100px";
+        element7.style.height="100px";*/
+        //element4.style.right="-1000px";
+        //element4.style.opacity="0";
 
 
 
