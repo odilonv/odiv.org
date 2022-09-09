@@ -318,7 +318,7 @@ ul.reseaux> li:hover{
     color: white;
     top: 75px;
     left: 150px;
-    font-size: 20px;
+    font-size: 1rem;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
     line-height: 0.70em;
     outline: none;
@@ -369,7 +369,7 @@ ul.reseaux> li:hover{
 
 
 .arcdecercleL2{
-    position: fixed;
+    position: absolute;
     width: 100px;
     height: 50px;
 
@@ -377,8 +377,10 @@ ul.reseaux> li:hover{
     background: transparent;
     border: 1px solid white;
     border-top: 0;
-    bottom: 305px;
-    left: -145px;
+    bottom: -605px;
+    left: -45px;
+    /*bottom: 305px;
+    left: -145px;*/
 }
 
 
