@@ -71,11 +71,11 @@
 
                         <label>. Prenom</label></p>
                         <p><input type="text" name="nom" class="txtform"><input type="text" name="prenom" class="txtform"></p>
-                    <p>Mail .</p>
-                    <input type="email" name="email" class="txtformMail">
-                    <p>Message .</p>
-                    <textarea rows="9" name="message" class="txtformMsg"></textarea>
-                    <button class="contact-circle">Envoyer</button>
+                        <p>Mail .</p>
+                        <input type="email" name="email" class="txtformMail">
+                        <p>Message .</p>
+                        <textarea rows="9" name="message" class="txtformMsg"></textarea>
+                        <button class="contact-circle">Envoyer</button>
                     </form>
                     <?php
                         if (isset($_POST['message'])) {
