@@ -131,7 +131,6 @@ h3#slogan {
 }
 
 .btn-circle:hover{
-    transform: rotate(360deg)
     scale(1.1);
 }
 
