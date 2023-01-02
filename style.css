@@ -68,7 +68,6 @@ img.logo.active {
 
 
 h3#slogan {
-    z-index: 1;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     color: white;
@@ -86,20 +85,30 @@ h3#slogan {
     right: 40px;
 
 }
-
-
-.contact-circle {
-    padding: 20px;
-    box-shadow: 0 0 20px 0 rgba( 31, 38, 135, 0.37 );
+.contact-circle{
     position: absolute;
     right: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.btn-contact{
+    position: relative;
+    width: 35%;
+    border-radius: 15px;
+}
+
+
+.contact-circle,
+.btn-contact{
+    padding: 20px;
+    box-shadow: 0 0 20px 0 rgba( 31, 38, 135, 0.37 );
+
     font-size: 1.1em;
     background: white;
     color: #f15f5f;
-    width: 50px;
-    height: 50px;
     transition: 1s;
-    border-radius: 50%;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -107,7 +116,8 @@ h3#slogan {
     border: 1.5px solid #fff;
 }
 
-.contact-circle:hover{
+.contact-circle:hover,
+.btn-contact:hover{
     background: #f15f5f;
     color: white;
 }
@@ -130,9 +140,6 @@ h3#slogan {
     transition: 2s;
 }
 
-.btn-circle:hover{
-    scale(1.1);
-}
 
 
 .line {
@@ -307,22 +314,30 @@ section {
     width: 100%;
 }
 
-section .text-box {
+section .text-box,
+section .text-box-contact{
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
-    min-height: 81vh;
-    border-radius: 0  0 0 50px;
-    margin: 0 0 100px 110px;
     padding: 70px;
     background: rgba( 0, 0, 0, 0.2 );
     box-shadow: 0 0 20px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 8.5px );
     -webkit-backdrop-filter: blur( 8.5px );
-    /*border-radius: 30px;*/
-    /*border: 1px solid rgba( 255, 255, 255, 0.18 );*/
 }
+section .text-box{
+    min-height: 81vh;
+    margin: 0 0 100px 120px;
+    border-radius: 0  0 0 50px;
+}
+
+section .text-box-contact{
+    border-radius: 20px;
+    width: 50%;
+
+}
+
 
 section .text-box p{
     font-family: 'Montserrat', sans-serif;
@@ -367,7 +382,7 @@ section h1 {
 }
 section .container h1{
 
-    margin:  23px 0 30px 110px;
+    margin:  20px 0 30px 120px;
 }
 section .text-box h2 {
     font-size: 2em;
@@ -449,7 +464,7 @@ section .text-box h2 {
 
 
 .contain .box{
-    height: 20px;
+    height: 100%;
     transform-style: preserve-3d;
     animation: animate 25s linear infinite;
     z-index: 1;
@@ -458,35 +473,33 @@ section .text-box h2 {
 @keyframes animate {
     0%
     {
-        transform: perspective(5000px) rotateX(0deg) rotate(20deg);
+        transform: perspective(180px) rotateX(0deg) rotate(10deg);
     }
     100%
     {
-        transform: perspective(5000px) rotateX(360deg);
+        transform: perspective(180px) rotateX(360deg) rotate(10deg);
     }
 }
 .contain{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    right: 100px;
-    top:90px;
+    position: relative;
 }
 
 .contain .box span{
     position: absolute;
     color: white;
-    font-size: 15px;
+    font-size: 2em;
     white-space: nowrap;
     text-transform: uppercase;
     font-weight: 100;/*
     padding: 0 100px;*/
-    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.75), transparent);
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,1), transparent);
     line-height: 0;
     transform-style: preserve-3d;
-    text-shadow: 0 5px 20px rgba(0,0,0,0.8);
-    transform: translate(-50%,-50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(60px);
+    text-shadow: 0 5px 20px rgba(0,0,0,1);
+    transform: translate(-50%,-50%) rotateX(calc(var(--i) * 24deg)) translateZ(85px);
 }
 
 .contain .box span i:nth-child(1){
@@ -608,12 +621,13 @@ section .text-box h2 {
 .compets{
     position: relative;
     transform: skewY(-5deg);
-    margin-left: 100px;
+    margin-left: 15%;
+    margin-top: 50px;
+
 }
 .compets li{
     position: relative;
     list-style: none;
-    width: 400px;
     background: rgba(199,53,61,1);
 
     padding: 25px;
@@ -702,6 +716,7 @@ section .text-box h2 {
 footer{
     display: flex;
     flex-direction: column;
+    position: relative;
     background: radial-gradient(circle, rgba(60,0,0,1) 0%, rgba(164,48,48,1) 0%, rgba(227,95,102,1) 100%);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     border-radius: 10% 10% 0 0;
@@ -853,8 +868,8 @@ ul.reseaux{
     flex-direction: column;
     text-align: center;
     position: fixed;
-    bottom: 105px;
-    margin-left: 40px;
+    bottom: 15%;
+    left: 40px;
     z-index: 1;
 }
 
@@ -878,7 +893,8 @@ ul.reseaux> li:hover{
 }
 
 .smallLine,
-.rectanglehnav
+.rectanglehnav,
+.envoiline
 {
     position: relative;
     background: white;
@@ -898,6 +914,11 @@ ul.reseaux> li:hover{
     top: 59px;
 }
 
+.envoiline{
+    border-radius: 80px;
+    width: 50%;
+}
+
 .rectangleleft,
 .rectanglesurleft
 {
@@ -915,15 +936,11 @@ ul.reseaux> li:hover{
 
 .rectanglesurleft
 {
-    height: 48%;
-    top: 130px;
+    height: 52%;
+    top: 12%;
     left: 54px;
     border-radius: 80px;
 }
-
-
-
-
 
 .arcdecercleL{
     position: fixed;
@@ -937,117 +954,35 @@ ul.reseaux> li:hover{
     left: -45px;
 }
 
-.arcdecercleR{
-    position: fixed;
-    width: 100px;
-    height: 50px;
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    background: transparent;
-    border: 1px solid white;
-    border-bottom: 0;
-    bottom: 100px;
-    right: -45px;
-    transition: 2s;
-}
 
-.arcdecercleR2{
-    position: absolute;
-    opacity: 0;
-    width: 100px;
-    height: 50px;
-    border-radius: 50% 0 0 0 / 100% 100% 0 0;
-    background: transparent;
-    border: 1px solid white;
-    border-bottom: 0;
-    border-right: 0;
-    bottom: -1099px;
-    left: 55px;
-    transition: 3s;
-}
-
-
-.arcdecercleL2{
-    position: absolute;
-    width: 100px;
-    height: 50px;
-
-    border-radius: 0 0 50% 50% / 0 0 100% 100% ;
-    background: transparent;
-    border: 1px solid white;
-    border-top: 0;
-    bottom: -605px;
-    left: -45px;
-    /*bottom: 305px;
-    left: -145px;*/
-}
-
-.arcdecercleRreverse{
-    position: absolute;
-    width: 675px;
-    height: 360px;
-    border-radius: 0 80% 10% 30% / 0 0 0 40% ;
-
-    background: transparent;
-    border: 1px solid white;
-    border-top: 0;
-    border-right: 0;
-    bottom: -3350px;
-    left: 55px;
-    transition: 3s;
-}
-
-.btn:hover{
-    background: #f15f5f;
-    color: white;
-    transform: scale(1.05);
-}
-
-#contactlab{
-    font-size: 35px;
-    text-transform: uppercase;
-    text-shadow: 0 2px 12px rgba(0,0,0,1);
-}
-
-#contactlabe{
-    font-size: 55px;
-    color: lightcoral;
-}
-
-#contact{
-    padding: 10%;
-    position: relative;
-    background: rgb(199,53,61);
-    background: linear-gradient(rgba(199,53,61,1) 0%, rgba(243,92,92,1) 32%, rgba(199,72,72,1) 100%);
-    height: 100%;
-    width: 100%;
+section#contact{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
-#contact .text-box{
-    width: 800px;
-}
-#contact .text-box p{
+
+
+#contact .text-box-contact p {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
 }
 
 input, textarea{
-
-    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     text-shadow: 0 2px 12px rgba(0,0,0,1);
     margin-bottom: 3%;
-    background: rgba( 255, 255, 255, 0.2 );
+    background: rgba( 0, 0, 0, 0.1 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 8.5px );
     -webkit-backdrop-filter: blur( 8.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 4px 5px;
+    font-size: 1.1em;
 }
 
 .alert{
@@ -1069,7 +1004,6 @@ input, textarea{
 
 
 .txtform{
-    position: relative;
     resize: none;
     width: 40%;
 }
@@ -1079,60 +1013,52 @@ input, textarea{
 }
 .txtformMsg{
     width: 100%;
-    height: 200px;
+    min-height: 200px;
+    height: 100%;
 }
 
-.btn{
-    background: white;
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 8.5px );
-    -webkit-backdrop-filter: blur( 8.5px );
-    border-radius: 10px;
-    border: 2px solid #f15f5f;
-    color: #f15f5f;
-    height: 50px;
-    width: 100%;
+.envoi-contact{
+    margin-top: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 1.5s;
-    margin: 20px;
-}
-
-#contact .text-container {
-    display: flex;
-    margin-bottom: 0;
-
-}
-#txxtxtx{
-    display: flex;
-    justify-content: space-between;
-}
-.moitie{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-.moitiep{
     width: 100%;
     height: 100%;
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    flex-direction: column;
-    padding-top:10%;
-
-}
-#pad-top{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top:10%;
+    justify-content: space-between;
 }
 
-#contact .text-container .text-box {
-    padding: 50px;
+
+
+
+
+@media (min-width: 1920px){
+    section .text-box{
+        width: 130ch;
+    }
+    .compets li{
+        width: 500px;
+    }
+    section#contact{
+        flex-direction: row;
+    }
+    .contain {
+        margin-left: 12%;
+    }
+}
+@media (max-width: 1919px) and (min-width: 1600px){
+    section .text-box{
+        width: 110ch;
+    }
+
+}
+@media (max-width: 1919px){
+    .contain{
+        margin: 150px 0 100px 0;
+    }
+    .contain .box span{
+        font-size: 1.5em;
+        transform: translate(-50%,-50%) rotateX(calc(var(--i) * 24deg)) translateZ(70px);
+    }
 }
 
 
@@ -1146,9 +1072,9 @@ input, textarea{
         text-align: center;
         margin: 0 30px 0 30px;
     }
+
     .contact-circle,
-    img.logo,
-    .circle-anim{
+    img.logo{
         margin: 10px;
     }
     ul.reseaux> li a{
@@ -1176,10 +1102,18 @@ input, textarea{
         font-size: 0.8em;
     }
 
+
 }
 
 
 @media (max-width: 900px) {
+    #contact .text-box-contact .contact-circle{
+        font-size: 0.8em;
+    }
+    #contact .text-box-contact .envoiline{
+        display: none;
+    }
+
     footer{
         border-radius: 50px 50px 0 0;
     }
@@ -1190,6 +1124,7 @@ input, textarea{
         padding: 10px;
         font-size: 1em;
     }
+
     .quick-container{
         font-size: 0.6em;
         margin: 0 20px 0 20px;
@@ -1255,6 +1190,9 @@ input, textarea{
     }
     div.smallLine{
         margin-bottom: 50px;
+    }
+    #reseaux-contact {
+        display: none;
     }
 
     ul.reseaux{

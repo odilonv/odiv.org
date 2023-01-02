@@ -1,16 +1,7 @@
-var text = document.getElementById('text');
-var parallaxInstance = new Parallax(text);
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene);
-
-
 
 
 let section = document.querySelectorAll("section");
 let menu = document.querySelectorAll(".links-circle");
-
-
-
 
 const btnCircle = document.querySelector('.btn-circle');
 const circleMenu = document.querySelector('.circle-menu');
@@ -18,29 +9,21 @@ const contact = document.querySelector('.contact-circle');
 
 let i = 0;
 
-btnCircle.addEventListener('click', () => {
-    i++;
-    if(i & 1){
-        contact.style.right = '20px';
-        contact.style.opacity = 0;
-
+btnCircle.addEventListener('click', () =>
+    {
+        i++;
+        if(i & 1){
+            contact.style.right = '20px';
+            contact.style.opacity = 0;
+        }
+        else {
+            contact.style.opacity = 1;
+            contact.style.right = '100px';
+        }
+        btnCircle.classList.toggle('menu-anim');
+        circleMenu.classList.toggle('circle-anim');
     }
-    else {
-
-
-        contact.style.opacity = 1;
-        contact.style.right = '100px';
-    }
-    btnCircle.classList.toggle('menu-anim');
-    circleMenu.classList.toggle('circle-anim');
-
-}
 )
-
-
-
-
-
 
 window.onscroll = () => {
     section.forEach((i) => {
@@ -79,6 +62,15 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 // To check the scroll position on page load
 reveal();
+
+
+
+var text = document.getElementById('text');
+if(text!=null){
+    var parallaxInstance = new Parallax(text);
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);
+}
 
 
 // window.onscroll = function() {scrollFunction()};
