@@ -320,7 +320,7 @@ section .text-box-contact{
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 70px;
+
     background: rgba( 0, 0, 0, 0.2 );
     box-shadow: 0 0 20px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 8.5px );
@@ -330,11 +330,14 @@ section .text-box{
     min-height: 81vh;
     margin: 0 0 100px 120px;
     border-radius: 0  0 0 50px;
+    padding: 70px;
 }
 
 section .text-box-contact{
     border-radius: 20px;
     width: 50%;
+    margin-bottom: 50px;
+    padding: 40px;
 
 }
 
@@ -869,7 +872,7 @@ ul.reseaux{
     text-align: center;
     position: fixed;
     bottom: 15%;
-    left: 40px;
+    margin-left: 40px;
     z-index: 1;
 }
 
@@ -936,7 +939,7 @@ ul.reseaux> li:hover{
 
 .rectanglesurleft
 {
-    height: 52%;
+    height: 50%;
     top: 12%;
     left: 54px;
     border-radius: 80px;
@@ -968,6 +971,10 @@ section#contact{
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+}
+#contact .text-box-contact p label:nth-child(2){
+    justify-content: end;
+
 }
 
 input, textarea{
@@ -1018,7 +1025,7 @@ input, textarea{
 }
 
 .envoi-contact{
-    margin-top: 30px;
+    margin-top: 0px;
     display: flex;
     width: 100%;
     height: 100%;
@@ -1053,11 +1060,14 @@ input, textarea{
 }
 @media (max-width: 1919px){
     .contain{
-        margin: 150px 0 100px 0;
+        margin: 110px 0 110px 0;
     }
     .contain .box span{
         font-size: 1.5em;
         transform: translate(-50%,-50%) rotateX(calc(var(--i) * 24deg)) translateZ(70px);
+    }
+    #contact .text-box-contact{
+        width: 60%;
     }
 }
 
@@ -1089,6 +1099,7 @@ input, textarea{
     .compets li a{
         font-size: 0.6em;
     }
+
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
@@ -1107,8 +1118,28 @@ input, textarea{
 
 
 @media (max-width: 900px) {
-    #contact .text-box-contact .contact-circle{
+
+    #contact .text-box-contact{
+        width: 80%;
+    }
+
+    .contain .box span{
+        font-size: 1em;
+        transform: translate(-50%,-50%) rotateX(calc(var(--i) * 24deg)) translateZ(50px);
+    }
+    .contain{
+        margin: 140px 0 80px 0;
+    }
+
+    input, textarea{
+        font-size: 0.6em;
+    }
+    #contact .text-box-contact .btn-contact,
+    #contact .text-box-contact p{
         font-size: 0.8em;
+    }
+    #contact .text-box-contact .btn-contact {
+    width: 100%;
     }
     #contact .text-box-contact .envoiline{
         display: none;

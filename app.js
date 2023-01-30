@@ -65,8 +65,8 @@ reveal();
 
 
 
-var text = document.getElementById('text');
-if(text!=null){
+if(document.getElementById('scene')!=null){
+    var text = document.getElementById('text');
     var parallaxInstance = new Parallax(text);
     var scene = document.getElementById('scene');
     var parallaxInstance = new Parallax(scene);
