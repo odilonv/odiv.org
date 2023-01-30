@@ -2,12 +2,12 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ODIV</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
 
     <script src="https://kit.fontawesome.com/e789a2f629.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
@@ -17,7 +17,7 @@
 <header>
     <nav>
 
-        <a href="https://odiv.org"><img src="img/LOGO.png" alt="Logo Odiv" CLASS="logo"></a>
+        <a href="https://odiv.org"><img src="../assets/img/LOGO.png" alt="Logo Odiv" CLASS="logo"></a>
 
 
         <a href="#contact" class="contact-circle"><i class="fa-solid fa-message"></i></a>
@@ -38,11 +38,11 @@
 </header>
 
 <ul class="reseaux" id="reseaux-contact">
+    <li><a href="https://www.linkedin.com/in/odilon-vidal/"><i class="fab fa-linkedin"></i></a></li>
+    <li><a href="https://github.com/odilonv"><i class="fab fa-github"></i></a></li>
+    <li><a href="https://www.behance.net/odiv"><i class="fab fa-behance"></i></a></li>
     <li><a href="https://www.twitter.com/odiv_v"><i class="fab fa-twitter"></i></a></li>
     <li><a href="https://www.tiktok.com/odiv_v"><i class="fab fa-tiktok"></i></a></li>
-    <li><a href="https://www.behance.net/odiv_v"><i class="fab fa-behance"></i></a></li>
-    <li><a href="https://www.instagram.com/odiv_v"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="https://www.linkedin.com/in/odilon-vidal/"><i class="fab fa-linkedin"></i></a></li>
 </ul>
 
 <div class="rectangleleft"></div>
@@ -76,13 +76,17 @@
                     <label for="prenom">. Prenom</label>
                 </p>
                 <p>
-                    <input type="text" name="nom" class="txtform">
-                    <input type="text" name="prenom" class="txtform">
+                    <input type="text" name="nom" id="nom" class="txtform">
+                    <input type="text" name="prenom" id="prenom" class="txtform">
                 </p>
                 <p>Mail .</p>
-                <input type="email" name="email" class="txtformMail">
+                <label>
+                    <input type="email" name="email" class="txtformMail">
+                </label>
                 <p>Message .</p>
-                <textarea rows="9" name="message" class="txtformMsg"></textarea>
+                <label>
+                    <textarea rows="9" name="message" class="txtformMsg"></textarea>
+                </label>
                 <div class="envoi-contact"><div class="envoiline"></div> <button class="btn-contact">Envoyer</button></div>
             </form>
                     <?php
@@ -107,7 +111,7 @@
     </section>
 </div>
 
-<script src="app.js"></script>
+<script src="../assets/js/app.js"></script>
 
 </body>
 </html>

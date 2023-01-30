@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Akira Expanded";
-    src: url("fonts/Akira Expanded Demo.otf");
+    src: url("../fonts/Akira Expanded Demo.otf");
 }
 @font-face
 {
     font-family: "Montserrat";
-    src: url("fonts/Montserrat-Regular.ttf");
+    src: url("../fonts/Montserrat-Regular.ttf");
 }
 
 * {
@@ -430,10 +430,11 @@ section .text-box h2 {
     position: relative;
     animation: fillBars 10s;
     color: #f15f5f;
+
 }
 
 .skill-per::before{
-    content: attr(per);
+    content: attr(data-per);
     position: absolute;
     padding: 4px 6px;
     background: #f1f1f1;
@@ -452,6 +453,7 @@ section .text-box h2 {
     background: #f1f1f1;
     top: -20px;
     right: 0;
+    z-index: -1;
     transform: translateX(50%) rotate(45deg);
     border-radius: 2px;
 }
