@@ -1,11 +1,15 @@
 @font-face {
+
     font-family: "Akira Expanded";
     src: url("../fonts/Akira Expanded Demo.otf");
+    font-display: swap;
 }
 @font-face
 {
+
     font-family: "Montserrat";
     src: url("../fonts/Montserrat-Regular.ttf");
+    font-display: swap;
 }
 
 * {

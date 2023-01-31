@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ODIV</title>
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <script src="https://kit.fontawesome.com/e789a2f629.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
@@ -17,7 +17,7 @@
 <header>
     <nav>
 
-        <a href="https://odiv.org"><img src="../assets/img/LOGO.png" alt="Logo Odiv" CLASS="logo"></a>
+        <a href="https://odiv.org"><img src="assets/img/LOGO.webp" alt="Logo Odiv" CLASS="logo"></a>
 
 
         <a href="#contact" class="contact-circle"><i class="fa-solid fa-message"></i></a>
@@ -111,7 +111,7 @@
     </section>
 </div>
 
-<script src="../assets/js/app.js"></script>
+<script src="assets/js/app.js"></script>
 
 </body>
 </html>
