@@ -101,12 +101,11 @@ h3#slogan {
     position: relative;
     width: 35%;
     border-radius: 15px;
+    padding: 20px;
 }
-
-
 .contact-circle,
 .btn-contact{
-    padding: 20px;
+
     box-shadow: 0 0 20px 0 rgba( 31, 38, 135, 0.37 );
 
     font-size: 1.1em;
@@ -120,8 +119,19 @@ h3#slogan {
     border: 1.5px solid #fff;
 }
 
-.contact-circle:hover,
-.btn-contact:hover{
+.contact-circle .contactsvg{
+    width: 19px;
+    height: 19px;
+    fill: #f15f5f;
+    transition: 1s;
+}
+
+.contact-circle:hover .contactsvg{
+    fill: white;
+}
+
+.btn-contact:hover,
+.contact-circle:hover{
     background: #f15f5f;
     color: white;
 }
@@ -776,10 +786,13 @@ footer{
 ul.social-links> li{
     padding: 18px;
 }
+ul.social-links> li a svg{
+    width: 19px;
+    height: 19px;
+}
 
 ul.social-links> li a{
     padding: 15px;
-    font-size: 18px;
     display: block;
     justify-content: center;
     align-items: center;
@@ -877,15 +890,17 @@ ul.reseaux{
     flex-direction: column;
     text-align: center;
     position: fixed;
-    bottom: 15%;
+    bottom: 14.5%;
     margin-left: 40px;
     z-index: 1;
 }
-
+ul.reseaux > li svg{
+    width: 13px;
+    height: 13px;
+}
 ul.reseaux> li{
     margin: 0;
     list-style: none;
-    font-size: 12px;
     transition: 0.5s;
 }
 
@@ -893,8 +908,6 @@ ul.reseaux> li a{
     padding: 10px;
     display: block;
     color: #fff;
-
-
 }
 
 ul.reseaux> li:hover{
@@ -945,7 +958,7 @@ ul.reseaux> li:hover{
 
 .rectanglesurleft
 {
-    height: 50%;
+    height: 47%;
     top: 12%;
     left: 54px;
     border-radius: 80px;
@@ -1093,8 +1106,9 @@ input, textarea{
     img.logo{
         margin: 10px;
     }
-    ul.reseaux> li a{
-        padding: 0;
+    ul.reseaux li a svg{
+        width: 15px;
+        height: 15px;
     }
     ul.reseaux{
         bottom: 200px;
@@ -1104,6 +1118,10 @@ input, textarea{
     }
     .compets li a{
         font-size: 0.6em;
+    }
+    ul.social-links> li a svg{
+        width: 11px;
+        height: 11px;
     }
 
 }
@@ -1118,6 +1136,14 @@ input, textarea{
     .compets li a{
         font-size: 0.8em;
     }
+    ul.reseaux li a svg{
+        width: 20px;
+        height: 20px;
+    }
+    ul.reseaux li a{
+        padding: 15px;
+    }
+
 
 
 }
@@ -1159,7 +1185,6 @@ input, textarea{
     }
     ul.social-links> li a {
         padding: 10px;
-        font-size: 1em;
     }
 
     .quick-container{
@@ -1241,7 +1266,7 @@ input, textarea{
         flex-direction: row;
         margin: 0;
     }
-    ul.reseaux a i{
+    ul.reseaux a{
         padding: 10px;
     }
 
