@@ -1039,8 +1039,6 @@ input, textarea{
 }
 .txtformMsg{
     width: 100%;
-    min-height: 200px;
-    height: 100%;
 }
 
 .envoi-contact{

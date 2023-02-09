@@ -43,7 +43,7 @@
     </nav>
 </header>
 
-    <ul class="reseaux" id="reseaux">
+    <ul class="reseaux" id="reseaux-contact">
     <li>
         <a aria-label="linkedin" href="https://www.linkedin.com/in/odilon-vidal/">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
