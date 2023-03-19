@@ -82,6 +82,8 @@ h3#slogan {
     /*line-height: 0.70em;*/
     outline: none;
     margin-right: 300px;
+
+    z-index: 2;
 }
 
 .container-corner {
@@ -318,7 +320,6 @@ h3#slogan {
 
 
 section {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -326,6 +327,10 @@ section {
     position: relative;
     margin-bottom: 50px;
     width: 100%;
+}
+
+section#home{
+    min-height: 100vh;
 }
 
 section .text-box,
@@ -341,7 +346,6 @@ section .text-box-contact{
     -webkit-backdrop-filter: blur( 8.5px );
 }
 section .text-box{
-    min-height: 81vh;
     margin: 0 0 100px 120px;
     border-radius: 0  0 0 50px;
     padding: 70px;
@@ -589,7 +593,6 @@ section .text-box h2 {
     position: absolute;
     width: 100%;
     height: 100vh;
-    z-index: -1;
 }
 .containerAnim #scene{
     display: flex;
@@ -744,7 +747,7 @@ footer{
     z-index: 3;
 }
 .logo-footer-contain{
-    height: 20vh;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -765,18 +768,17 @@ footer{
     border: 5px solid #f15f5f;
     background: #f15f5f;
     border-radius: 100%;
-    box-shadow: 0 8px 15px 0 rgba( 31, 38, 135, 0.37);
 }
 
 .inner-footer{
-    margin: 0;
     padding: 0;
-    height: 25vh;
+    /*height: 25vh;*/
+    margin: 25px 0 50px 0;
 }
 
 .social-links{
     bottom: 0;
-    height: 30%;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -886,13 +888,9 @@ ul.quick-links> li{
 
 
 ul.reseaux{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    position: fixed;
-    bottom: 14.5%;
-    margin-left: 40px;
-    z-index: 1;
+    position: relative;
+    margin: 20px 0 20px 0;
+    z-index: 3;
 }
 ul.reseaux > li svg{
     width: 13px;
@@ -941,27 +939,32 @@ ul.reseaux> li:hover{
     width: 50%;
 }
 
+.sidebar{
+    margin-top: 120px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 108px;
+    align-items: center;
+}
 .rectangleleft,
 .rectanglesurleft
 {
-    position: fixed;
+    position: relative;
     background: white;
     width: 2px;
+    height: 100%;
 }
 
 .rectangleleft
 {
-    height: 12%;
-    bottom: 0;
-    left: 54px;
+    height: 50%;
 }
 
 .rectanglesurleft
 {
-    height: 47%;
-    top: 12%;
-    left: 54px;
-    border-radius: 80px;
+    height: 100%;
 }
 
 .arcdecercleL{
@@ -1097,20 +1100,21 @@ input, textarea{
     h3#slogan{
         top: 30vh;
         text-align: center;
-        margin: 0 30px 0 30px;
+        padding: 10px;
+        margin: 0;
+        width: 100%;
     }
 
     .contact-circle,
     img.logo{
         margin: 10px;
     }
+
     ul.reseaux li a svg{
         width: 15px;
         height: 15px;
     }
-    ul.reseaux{
-        bottom: 200px;
-    }
+
     .compets{
         margin: 0 0 0 20px;
     }
@@ -1148,7 +1152,13 @@ input, textarea{
 
 
 @media (max-width: 900px) {
-
+    ul.reseaux{
+        bottom: 200px;
+    }
+    .sidebar{
+        margin: 0;
+        width: 100%;
+    }
     #contact .text-box-contact{
         width: 80%;
     }
