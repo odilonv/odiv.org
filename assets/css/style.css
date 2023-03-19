@@ -25,6 +25,7 @@ body {
     background: rgb(199,53,61);
     background: radial-gradient(circle, rgba(199,53,61,1) 0%, rgba(243,92,92,1) 32%, rgba(199,72,72,1) 100%);
     overflow-x: hidden;
+    width: 100%;
 }
 
 header {
@@ -35,6 +36,11 @@ header {
 a {
     text-decoration: none;
     color: white;
+}
+
+
+.container{
+    width: 100%;
 }
 
 
@@ -296,7 +302,16 @@ h3#slogan {
 }
 
 
+.projectline{
+    width: 100px;
+    margin-left: 70px;
+}
 
+nav > h1{
+    font-size: 5em;
+    margin-left: 30px;
+    color: white;
+}
 
 /* FIN NAVBAR */
 
@@ -327,6 +342,7 @@ section {
     position: relative;
     margin-bottom: 50px;
     width: 100%;
+    height: 100%;
 }
 
 section#home{
@@ -334,11 +350,14 @@ section#home{
 }
 
 section .text-box,
-section .text-box-contact{
+section .text-box-contact,
+section .text-box-project{
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
+
+
 
     background: rgba( 0, 0, 0, 0.2 );
     box-shadow: 0 0 20px 0 rgba( 31, 38, 135, 0.37 );
@@ -349,6 +368,7 @@ section .text-box{
     margin: 0 0 100px 120px;
     border-radius: 0  0 0 50px;
     padding: 70px;
+
 }
 
 section .text-box-contact{
@@ -356,6 +376,16 @@ section .text-box-contact{
     width: 50%;
     margin-bottom: 50px;
     padding: 40px;
+
+}
+
+section .text-box-project{
+    display: flex;
+    margin-top: 120px;
+    padding: 70px;
+    border-radius: 0  0 0 50px;
+    width: 80ch;
+    height: 78vh;
 
 }
 
@@ -640,94 +670,103 @@ section .text-box h2 {
 /* FIN PARALLAX ODIV */
 
 /* PORTFOLIO */
-.compets{
+
+
+#pcenter{
+    text-align: center;
+}
+
+.grid-cards{
+    display: flex;
     position: relative;
-    transform: skewY(-5deg);
-    margin-left: 15%;
-    margin-top: 50px;
 
+    height: 100vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 80px;
 }
-.compets li{
+
+.card {
     position: relative;
-    list-style: none;
-    background: rgba(199,53,61,1);
-
-    padding: 25px;
-    transition: 0.5s;
-    z-index: calc(1 * var(--i));
+    width: 45%;
+    height: 30%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
 }
 
-.compets li:hover{
-    transform: translateX(-50px);
-    background: var(--clr);
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
 }
 
-.compets li::before{
-    content: '';
+.card::before {
+    content: "";
     position: absolute;
     top: 0;
-    left: -40px;
-    width: 40px;
-    height: 100%;
-    background: rgba(199,53,61,1);
-    filter: brightness(0.7);
-    transform-origin: right;
-    transform: skewY(45deg);
-    transition: 0.5s;
-}
-
-.compets li:hover::before{
-    background: var(--clr);
-    filter: brightness(0.7);
-}
-
-.compets li::after{
-    content: ' ';
-    position: absolute;
-    top: -40px;
     left: 0;
     width: 100%;
-    height: 40px;
-    background: rgba(199,53,61,1);
-    filter: brightness(0.9);
-    transform-origin: bottom;
-    transform: skewX(45deg);
-    transition: 0.5s;
-}
-
-.compets li:hover::after{
-    background: var(--clr);
-    filter: brightness(0.9);
-}
-
-.compets li a{
-    text-decoration: none;
-    color: white;
-    display: block;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-}
-.compets li:hover a{
-    color: rgba(199,53,61,1);
-}
-.compets li:last-child::after{
-    box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
-}
-.compets li span{
-    position: absolute;
-    top: 0;
-    left: -40px;
-    width: 40px;
     height: 100%;
-    transform-origin: right;
-    transform: skewY(45deg);
-    transition: 0.5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
+    background-image: url('/assets/img/WALLPAPER-GLASS.png') ;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
 }
+
+.card:nth-child(1):hover::before{
+    background-image: url('/assets/img/richVote.png');
+    opacity: 1;
+}
+.card:nth-child(2):hover::before{
+    background-image: url('/assets/img/website-card-aventuriers-du-rails.png');
+    opacity: 1;
+}
+.card:nth-child(3):hover::before{
+    background-image: url('/assets/img/website-card-wip.png');
+    opacity: 1;
+}
+
+.card:nth-child(4):hover::before{
+    background-image: url('/assets/img/website-card-odiv.png');
+    opacity: 1;
+}
+
+.card:nth-child(5):hover::before{
+    background-image: url('/assets/img/website-card-cgj2022.png');
+    opacity: 1;
+}
+
+.card:nth-child(6):hover::before{
+    background-image: url('/assets/img/website-card-wip.png');
+    opacity: 1;
+}
+
+.card:hover::before {
+    opacity: 0;
+}
+
+.card:hover h3 {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card h3 {
+    opacity: 1;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    transform: translateY(0);
+
+    transition: all 0.3s ease-in-out;
+}
+
+
 
 /* FIN PORTFOLIO */
 
@@ -914,7 +953,8 @@ ul.reseaux> li:hover{
 
 .smallLine,
 .rectanglehnav,
-.envoiline
+.envoiline,
+.projectline
 {
     position: relative;
     background: white;
@@ -927,6 +967,7 @@ ul.reseaux> li:hover{
     width: 80px;
     margin: 20px 0 20px 0;
 }
+
 
 .rectanglehnav{
     left: 120px;
@@ -987,6 +1028,8 @@ section#contact{
     flex-direction: column;
     align-items: center;
 }
+
+
 
 
 #contact .text-box-contact p {
@@ -1152,6 +1195,11 @@ input, textarea{
 
 
 @media (max-width: 900px) {
+    .sidebar {
+    position: absolute;
+    }
+
+
     ul.reseaux{
         bottom: 200px;
     }
@@ -1206,6 +1254,7 @@ input, textarea{
         margin:0 0 100px 0;
         width: 100%;
         border-radius: 0;
+        min-width: 0px;
     }
     .compets{
         margin-top: 80px;
@@ -1221,6 +1270,11 @@ input, textarea{
     }
     .skill-per::before{
         font-size: 0.6em;
+    }
+    .card h3{
+        padding: 5px;
+        font-size: 0.4em;
+        left: 0;
     }
     .section .text-box .divide{
         margin: 0;
@@ -1247,6 +1301,7 @@ input, textarea{
     }
     section .text-box h2{
         font-size: 1.2em;
+
     }
     section .text-box p{
         font-size: 1em;
