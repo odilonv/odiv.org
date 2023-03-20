@@ -12,6 +12,7 @@
     font-display: swap;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -39,9 +40,6 @@ a {
 }
 
 
-.container{
-    width: 100%;
-}
 
 
 /* NAVBAR */
@@ -336,7 +334,7 @@ nav > h1{
 
 section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     color: white;
     position: relative;
@@ -368,6 +366,7 @@ section .text-box{
     margin: 0 0 100px 120px;
     border-radius: 0  0 0 50px;
     padding: 70px;
+    width: 95ch;
 
 }
 
@@ -395,6 +394,12 @@ section .text-box p{
     font-size: 1.2em;
     /*color: rgb(255, 213, 206);*/
     color: snow;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -427,13 +432,14 @@ section .text-box p a.active{
 }
 
 
-section h1 {
+section:not(#home) .container h1 {
     font-size: 4em;
-    text-align: left;
+
 }
+
 section .container h1{
 
-    margin:  20px 0 30px 120px;
+    margin:  25px 0 20px 120px;
 }
 section .text-box h2 {
     font-size: 2em;
@@ -679,18 +685,18 @@ section .text-box h2 {
 .grid-cards{
     display: flex;
     position: relative;
-
-    height: 100vh;
+    height: 65vh;
+    width: 100%;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 80px;
+    justify-content: space-around;
+    margin-bottom: 50px;
 }
 
 .card {
     position: relative;
-    width: 45%;
-    height: 30%;
+    width: 48%;
+    height: 160px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
@@ -720,26 +726,30 @@ section .text-box h2 {
     background-image: url('/assets/img/richVote.png');
     opacity: 1;
 }
+
 .card:nth-child(2):hover::before{
+     background-image: url('/assets/img/website-card-odiv.png');
+     opacity: 1;
+ }
+.card:nth-child(6):hover::before{
     background-image: url('/assets/img/website-card-aventuriers-du-rails.png');
     opacity: 1;
+
 }
-.card:nth-child(3):hover::before{
+
+.card:nth-child(5):hover::before{
     background-image: url('/assets/img/website-card-wip.png');
     opacity: 1;
 }
 
-.card:nth-child(4):hover::before{
-    background-image: url('/assets/img/website-card-odiv.png');
-    opacity: 1;
-}
 
-.card:nth-child(5):hover::before{
+
+.card:nth-child(3):hover::before{
     background-image: url('/assets/img/website-card-cgj2022.png');
     opacity: 1;
 }
 
-.card:nth-child(6):hover::before{
+.card:nth-child(4):hover::before{
     background-image: url('/assets/img/website-card-wip.png');
     opacity: 1;
 }
@@ -984,6 +994,7 @@ ul.reseaux> li:hover{
     margin-top: 120px;
     position: fixed;
     display: flex;
+    z-index: 1;
     flex-direction: column;
     height: 100vh;
     width: 108px;
