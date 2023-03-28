@@ -13,6 +13,7 @@
 }
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -29,6 +30,7 @@ body {
     width: 100%;
 }
 
+
 header {
     width: 100%;
     background: transparent;
@@ -40,6 +42,9 @@ a {
 }
 
 
+.container{
+    width: 100%;
+}
 
 
 /* NAVBAR */
@@ -309,6 +314,7 @@ nav > h1{
     font-size: 5em;
     margin-left: 30px;
     color: white;
+    transition: 2s;
 }
 
 /* FIN NAVBAR */
@@ -334,7 +340,7 @@ nav > h1{
 
 section {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     color: white;
     position: relative;
@@ -366,7 +372,6 @@ section .text-box{
     margin: 0 0 100px 120px;
     border-radius: 0  0 0 50px;
     padding: 70px;
-    width: 95ch;
 
 }
 
@@ -377,38 +382,52 @@ section .text-box-contact{
     padding: 40px;
 
 }
-
+section .text-box-project .divide{
+    gap: 5%;
+}
 section .text-box-project{
-
-    z-index: 1;
     display: flex;
-    margin-top: 120px;
+    margin: 120px 0 0 120px;
+
+
     padding: 70px;
     border-radius: 0  0 0 50px;
-    width: 80ch;
-    height: 78vh;
-
+    width: 88%;
+    height: 80vh;
 }
 
-section .text-box-project > p{
-    font-family: Montserrat, serif;
-}
-
-
-section .text-box p{
+section .text-box p,
+section .text-box-project p{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1em;
+    font-size: 1.2em;
     /*color: rgb(255, 213, 206);*/
     color: snow;
-
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-
+#postit{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 80px;
+    height: 80px;
 }
 
+.projetImage{
+    height: 500px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 50px 16px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 50px 16px rgba(0,0,0,0.3);
+}
+
+#logoProjet{
+    width: 110px;
+    height: 110px;
+    border: 3px solid #8789ec;
+    border-radius: 100%;
+    position: absolute;
+    right: 20px;
+    top: 110px;
+}
 
 .divide{
     display: flex;
@@ -419,7 +438,8 @@ section .text-box p{
     align-items: center;
 }
 
-section .text-box p strong{
+section .text-box p strong,
+section .text-box-project p strong{
     color: white;
 }
 
@@ -438,27 +458,27 @@ section .text-box p a.active{
 }
 
 
-section:not(#home) .container h1 {
+section h1 {
     font-size: 4em;
-
-}
-
-section .container h1{
-
-    margin:  25px 0 20px 120px;
-}
-section .text-box h2 {
-    font-size: 2em;
-    text-transform: uppercase;
     text-align: left;
 }
+section .container h1{
 
-#postit{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 80px;
-    height: 80px;
+    margin:  20px 0 30px 120px;
+}
+
+section .text-box-project h2{
+    text-align: left;
+    font-size: 2em;
+}
+section .text-box h2{
+    font-size: 2em;
+    text-transform: uppercase;
+
+}
+
+section.text-box h2{
+    text-align: left;
 }
 
 #profil{
@@ -699,18 +719,18 @@ section .text-box h2 {
 .grid-cards{
     display: flex;
     position: relative;
-    height: 65vh;
-    width: 100%;
+
+    height: 70vh;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    margin-bottom: 50px;
+    justify-content: space-evenly;
+    margin-bottom: 80px;
 }
 
 .card {
     position: relative;
-    width: 48%;
-    height: 160px;
+    width: 45%;
+    height: 30%;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
@@ -740,23 +760,19 @@ section .text-box h2 {
     background-image: url('/assets/img/richVote.png');
     opacity: 1;
 }
-
-.card:nth-child(2):hover::before{
-     background-image: url('/assets/img/website-card-odiv.png');
-     opacity: 1;
- }
 .card:nth-child(6):hover::before{
     background-image: url('/assets/img/website-card-aventuriers-du-rails.png');
     opacity: 1;
-
 }
-
 .card:nth-child(5):hover::before{
     background-image: url('/assets/img/website-card-wip.png');
     opacity: 1;
 }
 
-
+.card:nth-child(2):hover::before{
+    background-image: url('/assets/img/website-card-odiv.png');
+    opacity: 1;
+}
 
 .card:nth-child(3):hover::before{
     background-image: url('/assets/img/website-card-cgj2022.png');
@@ -1005,10 +1021,10 @@ ul.reseaux> li:hover{
 }
 
 .sidebar{
+    z-index: 1;
     margin-top: 120px;
     position: fixed;
     display: flex;
-    z-index: 1;
     flex-direction: column;
     height: 100vh;
     width: 108px;
@@ -1159,10 +1175,32 @@ input, textarea{
     }
 }
 
+@media (max-width: 980px) {
+    .projectNav h1{
+        font-size: 3em;
+        margin-left: 10%;
+    }
+
+    .projectline{
+        display: none;
+    }
+    
+}
+
 
 @media (max-width: 600px) {
     .rectanglehnav{
         display: none;
+    }
+    .projectNav h1{
+        font-size: 2.5em;
+        margin-left: 8%;
+    }
+
+    .card h3{
+        padding: 5px;
+        font-size: 0.8em;
+        left: 2px;
     }
 
     h3#slogan{
@@ -1221,7 +1259,13 @@ input, textarea{
 
 @media (max-width: 900px) {
     .sidebar {
-    position: absolute;
+        position: absolute;
+    }
+
+    .card h3{
+        padding: 5px;
+        font-size: 1em;
+        left: 5px;
     }
 
 
@@ -1252,7 +1296,7 @@ input, textarea{
         font-size: 0.8em;
     }
     #contact .text-box-contact .btn-contact {
-    width: 100%;
+        width: 100%;
     }
     #contact .text-box-contact .envoiline{
         display: none;
@@ -1272,6 +1316,13 @@ input, textarea{
         font-size: 0.6em;
         margin: 0 20px 0 20px;
         letter-spacing: 1px;
+    }
+
+    section .text-box-project{
+        width: 100%;
+        border-radius: 0;
+        min-width: 0px;
+        margin: 100px 0 0 0;
     }
 
 
@@ -1296,11 +1347,7 @@ input, textarea{
     .skill-per::before{
         font-size: 0.6em;
     }
-    .card h3{
-        padding: 5px;
-        font-size: 0.4em;
-        left: 0;
-    }
+
     .section .text-box .divide{
         margin: 0;
     }
@@ -1324,7 +1371,8 @@ input, textarea{
     section h1{
         font-size: 2em;
     }
-    section .text-box h2{
+    section .text-box h2,
+    section .text-box-project h2{
         font-size: 1.2em;
 
     }
@@ -1362,7 +1410,7 @@ input, textarea{
         width: 30px;
     }
     .layer img{
-       display: none;
+        display: none;
     }
 
     .rectanglesurleft,
