@@ -379,6 +379,8 @@ section .text-box-contact{
 }
 
 section .text-box-project{
+
+    z-index: 1;
     display: flex;
     margin-top: 120px;
     padding: 70px;
@@ -388,10 +390,14 @@ section .text-box-project{
 
 }
 
+section .text-box-project > p{
+    font-family: Montserrat, serif;
+}
+
 
 section .text-box p{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
     /*color: rgb(255, 213, 206);*/
     color: snow;
 
@@ -445,6 +451,14 @@ section .text-box h2 {
     font-size: 2em;
     text-transform: uppercase;
     text-align: left;
+}
+
+#postit{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 80px;
+    height: 80px;
 }
 
 #profil{
