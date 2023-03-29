@@ -410,7 +410,6 @@ section .text-box-project{
     padding: 70px;
     border-radius: 0  0 0 50px;
     width: 88%;
-    height: 80vh;
 }
 
 #bodyADR .text-box-project{
@@ -437,13 +436,6 @@ section .text-box-project p{
 
 
 
-
-#richVote .projetImage{
-    -webkit-box-shadow: 0px 0px 50px 16px rgba(0,0,0,0.2);
-    box-shadow: 0px 0px 50px 16px rgba(0,0,0,0.2);
-    border-radius: 50px;
-    height: 450px;
-}
 
 #digTheCore .projetImage{
     height: 500px;
