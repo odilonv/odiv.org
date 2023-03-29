@@ -47,6 +47,23 @@ a {
 }
 
 
+#bodyRichVote{
+    background: rgba(157, 158, 252,1);
+}
+
+#bodyADR{
+    background: url("../img/projets/ADR.jpg");
+}
+
+#bodyDTC1{
+    background: rgb(49, 167, 233);
+}
+
+#bodyDTC2{
+    background: #a48aba ;
+}
+
+
 /* NAVBAR */
 
 nav{
@@ -311,7 +328,7 @@ h3#slogan {
 }
 
 nav > h1{
-    font-size: 5em;
+    font-size: 4em;
     margin-left: 30px;
     color: white;
     transition: 2s;
@@ -396,10 +413,15 @@ section .text-box-project{
     height: 80vh;
 }
 
+#bodyADR .text-box-project{
+    box-shadow: 0 0 20px 0 black;
+}
+
+
 section .text-box p,
 section .text-box-project p{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
     /*color: rgb(255, 213, 206);*/
     color: snow;
 }
@@ -412,14 +434,28 @@ section .text-box-project p{
     height: 80px;
 }
 
-.projetImage{
-    height: 500px;
+
+
+
+
+#richVote .projetImage{
+    -webkit-box-shadow: 0px 0px 50px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 50px 16px rgba(0,0,0,0.2);
     border-radius: 50px;
-    -webkit-box-shadow: 0px 0px 50px 16px rgba(0,0,0,0.3);
-    box-shadow: 0px 0px 50px 16px rgba(0,0,0,0.3);
+    height: 450px;
 }
 
-#logoProjet{
+#digTheCore .projetImage{
+    height: 500px;
+}
+
+.projetImage{
+    height: 450px;
+
+
+}
+
+.logoProjet{
     width: 110px;
     height: 110px;
     border: 3px solid #8789ec;
@@ -756,20 +792,20 @@ section.text-box h2{
     transition: all 0.3s ease-in-out;
 }
 
-.card:nth-child(1):hover::before{
+.card:nth-child(2):hover::before{
     background-image: url('/assets/img/richVote.png');
     opacity: 1;
 }
-.card:nth-child(6):hover::before{
+.card:nth-child(5):hover::before{
     background-image: url('/assets/img/website-card-aventuriers-du-rails.png');
     opacity: 1;
 }
-.card:nth-child(5):hover::before{
+.card:nth-child(6):hover::before{
     background-image: url('/assets/img/website-card-wip.png');
     opacity: 1;
 }
 
-.card:nth-child(2):hover::before{
+.card:nth-child(1):hover::before{
     background-image: url('/assets/img/website-card-odiv.png');
     opacity: 1;
 }
