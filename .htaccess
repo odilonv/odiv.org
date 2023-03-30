@@ -1,16 +1,8 @@
 RewriteEngine On
 RewriteBase /
 
-# Redirection pour les fichiers HTML manquants dans le dossier portfolio
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^portfolio/(.+)$ /portfolio/$1.html [L,R=301]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ /$1.php [L]
 
-# Masquer l'extension .html dans l'URL pour les fichiers de la racine du projet
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)\.html$ /$1 [L,R=301]
-
-# Redirection interne pour accéder aux fichiers HTML sans l'extension .html
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html [L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
