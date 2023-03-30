@@ -328,7 +328,7 @@ h3#slogan {
 }
 
 nav > h1{
-    font-size: 4em;
+    font-size: 2em;
     margin-left: 30px;
     color: white;
     transition: 2s;
@@ -443,7 +443,6 @@ section .text-box-project p{
 
 .projetImage{
     height: 450px;
-
 
 }
 
@@ -1205,7 +1204,7 @@ input, textarea{
 
 @media (max-width: 980px) {
     .projectNav h1{
-        font-size: 3em;
+        font-size: 1em;
         margin-left: 10%;
     }
 
@@ -1221,7 +1220,7 @@ input, textarea{
         display: none;
     }
     .projectNav h1{
-        font-size: 2.5em;
+        font-size: 0.75em;
         margin-left: 8%;
     }
 
@@ -1286,6 +1285,10 @@ input, textarea{
 
 
 @media (max-width: 900px) {
+
+    .projetImage, #digTheCore .projetImage{
+        height: 300px;
+    }
     .sidebar {
         position: absolute;
     }

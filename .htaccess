@@ -4,5 +4,5 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ /$1.php [L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L,QSA]
