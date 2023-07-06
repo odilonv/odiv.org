@@ -88,26 +88,6 @@
 
 <div class="container">
     <section id="contact">
-
-        <div class="contain">
-            <div class="box">
-                <span style="--i:1">CONTACT</span>
-                <span style="--i:2">CONTACT</span>
-                <span style="--i:3">CONTACT</span>
-                <span style="--i:4">CONTACT</span>
-                <span style="--i:5">CONTACT</span>
-                <span style="--i:6">CONTACT</span>
-                <span style="--i:7">CONTACT</span>
-                <span style="--i:8">CONTACT</span>
-                <span style="--i:9">CONTACT</span>
-                <span style="--i:10">CONTACT</span>
-                <span style="--i:11">CONTACT</span>
-                <span style="--i:12">CONTACT</span>
-                <span style="--i:13">CONTACT</span>
-                <span style="--i:14">CONTACT</span>
-                <span style="--i:15">CONTACT</span>
-            </div>
-        </div>
         <div class="text-box-contact">
             <form method="post">
                 <p>

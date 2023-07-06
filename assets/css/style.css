@@ -1091,6 +1091,7 @@ ul.reseaux> li:hover{
 
 section#contact{
     margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
