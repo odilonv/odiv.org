@@ -44,6 +44,7 @@ a {
 
 .container{
     width: 100%;
+    height: 100%;
 }
 
 
@@ -376,23 +377,21 @@ section .text-box-project{
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
-
-
-
     background: rgba( 0, 0, 0, 0.2 );
     box-shadow: 0 0 20px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 8.5px );
     -webkit-backdrop-filter: blur( 8.5px );
 }
+
 section .text-box{
     margin: 0 0 100px 120px;
     border-radius: 0  0 0 50px;
     padding: 70px;
-
+    height: 100%;
 }
 
 section .text-box-contact{
+    height: fit-content;
     border-radius: 20px;
     width: 50%;
     margin-bottom: 50px;
@@ -405,8 +404,7 @@ section .text-box-project .divide{
 section .text-box-project{
     display: flex;
     margin: 120px 0 0 120px;
-
-
+    height: 100%;
     padding: 70px;
     border-radius: 0  0 0 50px;
     width: 88%;
@@ -1091,7 +1089,6 @@ ul.reseaux> li:hover{
 
 section#contact{
     margin: 0;
-    height: 100vh;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -1160,7 +1157,6 @@ input, textarea{
     margin-top: 0px;
     display: flex;
     width: 100%;
-    height: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
