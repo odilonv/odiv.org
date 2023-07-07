@@ -44,6 +44,9 @@ a {
 
 .container{
     width: 100%;
+}
+
+.container > #contact{
     height: 100vh;
 }
 
