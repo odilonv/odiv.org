@@ -529,12 +529,12 @@ section.text-box h2 {
 }
 
 .skills {
+    display: flex;
+    align-items: center;
     width: 100%;
     max-width: 600px;
     padding: 0 20px;
     margin-left: 50px;
-    display: flex;
-    align-items: center;
 }
 
 .skill-name {
@@ -542,7 +542,7 @@ section.text-box h2 {
     font-weight: 700;
     color: #f1f1f1;
     text-transform: uppercase;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .skill-bar {
