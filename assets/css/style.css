@@ -59,6 +59,10 @@ a {
     background: url("../img/projets/ADR.jpg");
 }
 
+#bodyExplore {
+    background: #FFAE9E;
+}
+
 #bodyDTC1 {
     background: rgb(49, 167, 233);
 }
