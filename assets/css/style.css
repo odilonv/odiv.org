@@ -799,7 +799,7 @@ section.text-box h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/assets/img/WALLPAPER-GLASS.png');
+    background-image: url('odiv.org/assets/img/WALLPAPER-GLASS.png');
     background-size: cover;
     background-position: center;
     opacity: 0.5;
@@ -807,32 +807,32 @@ section.text-box h2 {
 }
 
 .card:nth-child(2):hover::before {
-    background-image: url('/assets/img/richVote.png');
+    background-image: url('odiv.org/assets/img/richVote.png');
     opacity: 1;
 }
 
 .card:nth-child(5):hover::before {
-    background-image: url('/assets/img/website-card-aventuriers-du-rails.png');
+    background-image: url('odiv.org/assets/img/website-card-aventuriers-du-rails.png');
     opacity: 1;
 }
 
 .card:nth-child(1):hover::before {
-    background-image: url('/assets/img/website-card-explore.png');
+    background-image: url('odiv.org/assets/img/website-card-explore.png');
     opacity: 1;
 }
 
 .card:nth-child(6):hover::before {
-    background-image: url('/assets/img/website-card-odiv.png');
+    background-image: url('odiv.org/assets/img/website-card-odiv.png');
     opacity: 1;
 }
 
 .card:nth-child(3):hover::before {
-    background-image: url('/assets/img/website-card-cgj2022.png');
+    background-image: url('odiv.org/assets/img/website-card-cgj2022.png');
     opacity: 1;
 }
 
 .card:nth-child(4):hover::before {
-    background-image: url('/assets/img/website-card-cgj2023.png');
+    background-image: url('odiv.org/assets/img/website-card-cgj2023.png');
     opacity: 1;
 }
 
