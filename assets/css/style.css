@@ -87,11 +87,10 @@ nav {
 img.logo {
     position: relative;
     left: 29px;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     transition: 0.5s;
     text-align: left;
-    border: 5px solid #f15f5f;
     box-shadow: 0 0 20px 0 rgba(31, 38, 135, 0.37);
     background: #f15f5f;
     border-radius: 100%;
