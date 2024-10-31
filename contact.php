@@ -21,7 +21,7 @@
 
         <a href="https://odiv.org"><img src="assets/img/LOGO.webp" alt="Logo Odiv" CLASS="logo"></a>
 
-        <a aria-label="contact" href="https://odiv.org/contact" class="contact-circle">
+        <a aria-label="contact" href="./contact" class="contact-circle">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="contactsvg">
                 <path d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"/>
             </svg>
@@ -29,9 +29,9 @@
         </a>
         <div class="container-corner">
             <div class="circle-menu">
-                <a href="https://odiv.org/#apropos" class="links-circle">01. PRESENTATION</a>
-                <a href="https://odiv.org/#competences" class="links-circle">02. COMPETENCES</a>
-                <a href="https://odiv.org/#portfolio" class="links-circle">03. PORTFOLIO</a>
+                <a href="./#apropos" class="links-circle">01. PRESENTATION</a>
+                <a href="./#competences" class="links-circle">02. COMPETENCES</a>
+                <a href="./#portfolio" class="links-circle">03. PORTFOLIO</a>
             </div>
             <div class="btn-circle">
                 <div class="line"></div>

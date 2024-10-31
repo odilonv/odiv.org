@@ -22,7 +22,7 @@ This repository contains the source code and assets for my personal portfolio we
 
 ## How to View
 
-You can visit my portfolio website [here](https://odiv.org/) to explore the content. Feel free to reach out if you have any questions or feedback!
+You can visit my portfolio website [here](./) to explore the content. Feel free to reach out if you have any questions or feedback!
 
 ## Contributing
 
