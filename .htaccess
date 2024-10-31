@@ -1,6 +1,8 @@
 RewriteEngine On
 RewriteBase /
 
+AddType application/x-httpd-php .php
+
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ /$1.php [L]
 
