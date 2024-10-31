@@ -13,7 +13,15 @@ btnCircle.addEventListener('click', () => {
     circleMenu.classList.toggle('circle-anim');
 });
 
-window.addEventListener('scroll', () => {
+const debounce = (func, wait) => {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+};
+
+const handleScroll = () => {
     const scrollPosition = window.scrollY;
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 10;
@@ -23,11 +31,16 @@ window.addEventListener('scroll', () => {
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             menuLinks.forEach(link => {
                 link.classList.remove("active");
-                document.querySelector(`header nav a[href*="${sectionId}"]`).classList.add("active");
+                const activeLink = document.querySelector(`header nav a[href*="${sectionId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
             });
         }
     });
-});
+};
+
+window.addEventListener('scroll', debounce(handleScroll, 100));
 
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
@@ -45,7 +58,7 @@ function reveal() {
     });
 }
 
-window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", debounce(reveal, 100));
 reveal();
 
 const scene = document.getElementById('scene');
